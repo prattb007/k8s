@@ -33,3 +33,21 @@ Config
 
 
  -------------------------------------------------------------------------------------------------------- 
+
+1.2 set hostname and note down IP address  (private IP only)				[ All VM ]
+
+			hostnamectl set-hostname master
+			hostnamectl set-hostname worker-1
+			hostnamectl set-hostname worker-2
+
+vi /etc/hosts 
+	
+10.0.0.5	master
+10.0.0.8	worker-1
+10.0.0.9	worker-2
+
+<img width="685" height="641" alt="image" src="https://github.com/user-attachments/assets/5da256b5-fb3a-433f-ad93-f15224df9a29" />
+
+
+--------------------------------------------------------------------------------------------------------------------
+
