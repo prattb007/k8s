@@ -70,6 +70,9 @@ Data Plane ( Worker Node )
 		kubectl  (master +  worker)  -->  Command for deploy YAML , service, cluster check 
 		
 ---------------------------------------------------------------
+<img width="678" height="466" alt="image" src="https://github.com/user-attachments/assets/4888a637-6370-40f6-b22d-f5aa8c78e6fd" />
+
+
 Namespace Linux : it is a feature of linux kernel that partition kernel resource such that one set of process sees one set of resources while another set of process sees a different set of resources. 
 
 
