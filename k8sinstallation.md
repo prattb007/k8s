@@ -2,8 +2,9 @@
 <img width="1193" height="348" alt="image" src="https://github.com/user-attachments/assets/b0d7430d-fe08-49a0-8829-08ac0a670ef0" />
 
 Config 
-master,e2-custom-2-6144,us-east1-d,debian-12
-worker-1,e2-custom-2-6144,us-east1-b,debian-12
+- master,e2-custom-2-6144,us-east1-d,debian-12
+
+- worker-1,e2-custom-2-6144,us-east1-b,debian-12
 
 ---------------------------------------------------------------------------------------------------------------------------------
 - Ports Needs to be open 
