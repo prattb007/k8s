@@ -51,3 +51,29 @@ vi /etc/hosts
 
 --------------------------------------------------------------------------------------------------------------------
 
+1.3  Public and private generate for communication between master and wn1   (ONLY ON MASTER NODE)
+
+			Goto master node and generate public and private key :
+
+				ssh-keygen  -t  rsa
+
+<img width="654" height="441" alt="image" src="https://github.com/user-attachments/assets/fe0756f2-bea5-4f6d-9004-2b6341d97fa3" />
+
+
+
+		now copy your public key and share with all worker node.
+
+		 cat  /root/.ssh/id_rsa.pub
+
+<img width="837" height="590" alt="image" src="https://github.com/user-attachments/assets/f3c3d778-9448-4737-bf36-fa8643e4c879" />
+
+
+	1.4  Now login to worker1 and 2  machine and open following file with user root
+	
+	
+		vi  /root/.ssh/authorized_keys
+ 		 Now paste here your master node public key 
+	<img width="887" height="486" alt="image" src="https://github.com/user-attachments/assets/b2b50f74-282c-4ec6-9d3a-5ddfec6333fd" />
+		
+			
+			save and exit 
