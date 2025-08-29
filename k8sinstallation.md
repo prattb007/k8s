@@ -72,8 +72,10 @@ vi /etc/hosts
 	
 	
 		vi  /root/.ssh/authorized_keys
- 		 Now paste here your master node public key 
-	<img width="887" height="486" alt="image" src="https://github.com/user-attachments/assets/b2b50f74-282c-4ec6-9d3a-5ddfec6333fd" />
+ 		 Now paste here your master node public key
+	
+<img width="887" height="486" alt="image" src="https://github.com/user-attachments/assets/a8b2610f-17b4-49e5-bafc-abbd7a82412a" />
+
 		
 			
 			save and exit 
