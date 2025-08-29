@@ -29,22 +29,7 @@ Config
 
   10255/tcp: Kubernetes kubelet API server for read-only access with no authentication (master and worker nodes)
 
-  resource "google_compute_firewall" "k8s_ports" {
-  name    = "allow-k8s-ports"
-  network =   google_compute_network.test-vpc.name
+ <img width="798" height="366" alt="image" src="https://github.com/user-attachments/assets/9061e8f2-9f91-48e8-804a-b42f7a6c82b4" />
 
-  allow {
-    protocol = "tcp"
-    ports    = ["2379", "2380", "6443", "8090", "8091", "10250", "10251", "10252", "10255"]
-  }
-
-  allow {
-    protocol = "udp"
-    ports    = ["8472"]
-  }
-
-  source_ranges = ["0.0.0.0/0"]
-
-}
 
  -------------------------------------------------------------------------------------------------------- 
