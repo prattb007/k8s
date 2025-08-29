@@ -89,3 +89,7 @@ Namespace in k8s : In k8s namespace provide a mechanism for isolating group of r
 		Worker Node   (2)
 		
 ---------------------------------------------
+
+
+<img width="949" height="473" alt="image" src="https://github.com/user-attachments/assets/34f78640-8ded-4567-998b-221d2c946d08" />
+
