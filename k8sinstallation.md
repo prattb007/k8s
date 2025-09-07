@@ -273,6 +273,41 @@ kubeadm join 10.0.0.5:6443 --token 6slvus.736cfzv5bcskf28b \
         --discovery-token-ca-cert-hash sha256:71990b049728de2aa19ee25003e7275a5fab585d166c8894852fb0d9161fe037
 
 
+----------------------------------------------------------------------------------------------
+
+Network setup for Cluster on Master Network 
+
+			calico	  Layer 3 (routing)
+			flunel    (Overlay)
+			weavenet   (Overlay) (We will choose this )
+
+<img width="765" height="379" alt="image" src="https://github.com/user-attachments/assets/93bda293-797a-4404-858f-c6b5bc164151" />
+
+kubectl apply -f https://github.com/weaveworks/weave/releases/download/v2.8.1/weave-daemonset-k8s.yaml
+
+<img width="905" height="173" alt="image" src="https://github.com/user-attachments/assets/30845584-5a3c-428b-b866-5dcf6297125d" />
+
+
+----------------------------------------------------------------------------------------------------------------------------------
+
+Follow Kubeadm join steps on worker nodes 
+
+<img width="902" height="457" alt="image" src="https://github.com/user-attachments/assets/e1182584-358f-4424-89d0-4e8b8de2c25f" />
+
+<img width="892" height="483" alt="image" src="https://github.com/user-attachments/assets/78b3b3eb-ae57-4a3a-a39b-0b0e0d9b7e60" />
+
+<img width="905" height="139" alt="image" src="https://github.com/user-attachments/assets/775cce76-c6f8-4901-9e03-07bd49d68cf7" />
+
+
+
+
+
+
+
+
+
+
+
 
 
 
