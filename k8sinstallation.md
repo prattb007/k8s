@@ -150,7 +150,8 @@ Docker installation and start the service before k8s installation [ All  VM ]
 
 
 -----------------------------------------------------------------------------------------------------------------
-- for centOs or RHEL
+- #for centOs or RHEL
+  
 Step-4 Create apt-get (Ubuntu ) |  Centos /RHEL (DNF / yum) repo for download k8s package 	[ All  VM ]
 
 
@@ -173,7 +174,7 @@ exclude=kubelet kubeadm kubectl cri-tools kubernetes-cni
 		yum clean all
 		yum makecache
 
-- For Debian 
+- #For Debian 
 
 # Update system
 apt update -y
@@ -201,7 +202,7 @@ Step-5  Pull / download packages from k8s repo ( ALL VM )
 
 		yum install -y kubelet kubeadm kubectl --disableexcludes=kubernetes
 
-- For Debian
+- #For Debian
 
 apt install -y kubelet kubeadm kubectl
 
