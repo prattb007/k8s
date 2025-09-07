@@ -79,3 +79,38 @@ vi /etc/hosts
 		
 			
 			save and exit 
+
+   -----------------------------------------------------------------------------------------
+
+   - Expected Errors (may be)
+
+<img width="764" height="94" alt="image" src="https://github.com/user-attachments/assets/378c7b05-e71b-4e90-bad9-d0e5b9e98db1" />
+
+Set the correct permissions 
+
+chmod 700 /root/.ssh
+chmod 600 /root/.ssh/authorized_keys
+chown -R root:root /root/.ssh
+
+Cat  /etc/ssh/sshd_config
+
+check the belwo permoissions 
+
+
+<img width="698" height="259" alt="image" src="https://github.com/user-attachments/assets/341b4702-24b5-48de-8bcf-bdf1350b9a0c" />
+
+Set the permissions to YES 
+
+
+<img width="786" height="324" alt="image" src="https://github.com/user-attachments/assets/a7d61fde-d79c-4658-b354-fd7be7bebc6a" />
+
+
+Test the connection from Master node 
+
+
+<img width="870" height="221" alt="image" src="https://github.com/user-attachments/assets/b23b982c-e842-45b4-9874-8abd3751d4d8" />
+
+
+
+
+      
