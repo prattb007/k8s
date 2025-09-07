@@ -141,9 +141,73 @@ Docker installation and start the service before k8s installation [ All  VM ]
  - For Debian
 
     apt update -y
+   
 	apt install -y docker.io
+
 	systemctl start docker
+
 	systemctl enable docker
+
+
+-----------------------------------------------------------------------------------------------------------------
+- for centOs or RHEL
+Step-4 Create apt-get (Ubuntu ) |  Centos /RHEL (DNF / yum) repo for download k8s package 	[ All  VM ]
+
+
+Step-4 Create apt-get (Ubuntu ) |  Centos /RHEL (DNF / yum) repo for download k8s package 	[ All  VM ]
+
+cd  /etc/yum.repos.d/
+
+vim k8s.repo
+
+[kubernetes]
+name=Kubernetes
+baseurl=https://pkgs.k8s.io/core:/stable:/v1.33/rpm/
+enabled=1
+gpgcheck=1
+gpgkey=https://pkgs.k8s.io/core:/stable:/v1.33/rpm/repodata/repomd.xml.key
+exclude=kubelet kubeadm kubectl cri-tools kubernetes-cni
+
+
+4.1 
+		yum clean all
+		yum makecache
+
+- For Debian 
+
+# Update system
+apt update -y
+apt install -y apt-transport-https ca-certificates curl gpg
+
+# Create keyrings directory if not exists
+mkdir -p /etc/apt/keyrings
+
+# Download Kubernetes repo GPG key
+curl -fsSL https://pkgs.k8s.io/core:/stable:/v1.33/deb/Release.key \
+  | gpg --dearmor -o /etc/apt/keyrings/kubernetes-apt-keyring.gpg
+
+# Add Kubernetes repo
+echo "deb [signed-by=/etc/apt/keyrings/kubernetes-apt-keyring.gpg] \
+https://pkgs.k8s.io/core:/stable:/v1.33/deb/ /" \
+| tee /etc/apt/sources.list.d/kubernetes.list
+
+4.1
+apt update -y
+
+-----------------------------------------------------------------------------------------------------------
+
+Step-5  Pull / download packages from k8s repo ( ALL VM )
+
+
+		yum install -y kubelet kubeadm kubectl --disableexcludes=kubernetes
+
+- For Debian
+
+apt install -y kubelet kubeadm kubectl
+
+apt-mark hold kubelet kubeadm kubectl
+
+
 
 
 
