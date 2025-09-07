@@ -115,7 +115,9 @@ vi /etc/hosts
 Set the correct permissions 
 
 chmod 700 /root/.ssh
+
 chmod 600 /root/.ssh/authorized_keys
+
 chown -R root:root /root/.ssh
 
 Cat  /etc/ssh/sshd_config
