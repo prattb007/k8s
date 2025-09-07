@@ -298,7 +298,8 @@ Follow Kubeadm join steps on worker nodes
 
 <img width="892" height="483" alt="image" src="https://github.com/user-attachments/assets/78b3b3eb-ae57-4a3a-a39b-0b0e0d9b7e60" />
 
-<img width="905" height="139" alt="image" src="https://github.com/user-attachments/assets/775cce76-c6f8-4901-9e03-07bd49d68cf7" />
+<img width="625" height="114" alt="image" src="https://github.com/user-attachments/assets/99198d0a-fcbe-4b8e-af23-7798dfb775c0" />
+
 
 
 
