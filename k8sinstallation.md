@@ -23,7 +23,7 @@ Swap memory must be disabled
 Note:  IN Linux there is only one service which is SELinux require restart 
 
 
-On Debian 12 (bookworm)
+#On Debian 12 (bookworm)
 
 You don’t need to disable SELinux (because it isn’t active).
 
