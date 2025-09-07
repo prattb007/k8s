@@ -6,6 +6,32 @@ Config
 
 - worker-1,e2-custom-2-6144,us-east1-b,debian-12
 
+--------------------------------------------------------------------------------------------------------
+
+Swap memory must be disabled 
+	
+		swapon -s 
+		
+		swapoff -a
+		
+	SELinux  should disabled or permissive. 
+
+			vim /etc/sysconfig/selinux
+
+			SELINUX=disabled
+			
+Note:  IN Linux there is only one service which is SELinux require restart 
+
+
+On Debian 12 (bookworm)
+
+You don’t need to disable SELinux (because it isn’t active).
+
+You only need to make sure AppArmor doesn’t block Kubernetes pods. Normally kubelet & containerd work fine with AppArmor. 
+
+<img width="528" height="62" alt="image" src="https://github.com/user-attachments/assets/6b363aaf-0e6d-42a7-b4fe-d78bf5576118" />
+
+
 ---------------------------------------------------------------------------------------------------------------------------------
 - Ports Needs to be open 
 
@@ -207,6 +233,28 @@ Step-5  Pull / download packages from k8s repo ( ALL VM )
 apt install -y kubelet kubeadm kubectl
 
 apt-mark hold kubelet kubeadm kubectl
+
+
+--------------------------------------------------------------------------------------------------------------
+
+Step-6 Start kubelet (Agent)  service       		[ALL VM]
+
+	
+	systemctl start kubelet ; systemctl enable kubelet ; systemctl status kubelet
+
+on Master 
+
+<img width="882" height="227" alt="image" src="https://github.com/user-attachments/assets/b3f99b6f-34a2-4e98-8e72-7d3cdd1d1f98" />
+
+On Worker 
+
+<img width="895" height="377" alt="image" src="https://github.com/user-attachments/assets/e82aa78c-67cf-4955-9385-1e4e221e349f" />
+
+
+
+
+
+
 
 
 
