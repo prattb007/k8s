@@ -251,8 +251,26 @@ On Worker
 <img width="895" height="377" alt="image" src="https://github.com/user-attachments/assets/e82aa78c-67cf-4955-9385-1e4e221e349f" />
 
 
+-----------------------------------------------------------------------------------------------------------------------
+
+Step 7 initialize kube administartive agent on master node only 
+
+kubeadm init 
 
 
+<img width="893" height="601" alt="image" src="https://github.com/user-attachments/assets/df07b432-f192-4733-9784-bfa1b59b99db" />
+
+
+	mkdir -p $HOME/.kube
+  	sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
+  	sudo chown $(id -u):$(id -g) $HOME/.kube/config
+
+
+<img width="919" height="256" alt="image" src="https://github.com/user-attachments/assets/e60f02d6-7d04-42e1-aca2-0a6ba0882aec" />
+
+
+kubeadm join 10.0.0.5:6443 --token 6slvus.736cfzv5bcskf28b \
+        --discovery-token-ca-cert-hash sha256:71990b049728de2aa19ee25003e7275a5fab585d166c8894852fb0d9161fe037
 
 
 
