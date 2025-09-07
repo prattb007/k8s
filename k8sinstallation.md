@@ -117,12 +117,13 @@ Step 2 Add the kernal argument for Ipv4 and Ipv6 traffic
 	vi   /etc/sysctl.d/k8s.conf		
 		
 net.bridge.bridge-nf-call-ip6tables = 1
+
 net.bridge.bridge-nf-call-iptables = 1
 
 
 <img width="617" height="75" alt="image" src="https://github.com/user-attachments/assets/7b1d7aba-7e30-4913-8c84-bd2f1307342d" />
 
-
+Reload config with **sysctl --system**
 
 
 
