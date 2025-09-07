@@ -82,7 +82,7 @@ vi /etc/hosts
 
    -----------------------------------------------------------------------------------------
 
-   - Expected Errors (may be)
+   - Expected Errors (may be) on Worker node 
 
 <img width="764" height="94" alt="image" src="https://github.com/user-attachments/assets/378c7b05-e71b-4e90-bad9-d0e5b9e98db1" />
 
@@ -112,7 +112,7 @@ Test the connection from Master node
 
 -------------------------------------------------------------------------------------------------------------------------------------
 
-Step 2 Add the kernal argument for Ipv4 and Ipv6 traffic 
+Step 2 Add the kernal argument for Ipv4 and Ipv6 traffic (on worker as well as Master)
 
 	vi   /etc/sysctl.d/k8s.conf		
 		
@@ -124,6 +124,29 @@ net.bridge.bridge-nf-call-iptables = 1
 <img width="617" height="75" alt="image" src="https://github.com/user-attachments/assets/7b1d7aba-7e30-4913-8c84-bd2f1307342d" />
 
 Reload config with **sysctl --system**
+
+---------------------------------------------------------------------------------------------------------------
+
+Step -3 Docker install
+
+Docker installation and start the service before k8s installation [ All  VM ]
+
+
+- For RHEL/CentOS/Rocky/Alma Linux system
+  
+   yum install docker -y 
+   
+   systemctl start docker && systemctl enable docker
+
+ - For Debian
+
+    apt update -y
+	apt install -y docker.io
+	systemctl start docker
+	systemctl enable docker
+
+
+
 
 
 
